@@ -1,0 +1,30 @@
+<ion-content>
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="title-1">Airports Finder</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-card class="card-1">
+<ion-item class="item-1">
+  <ion-toolbar class="tool">
+ <ion-input placeholder="Enter the city" class="input-1" [(ngModel)]="airport1"></ion-input>
+</ion-toolbar>
+</ion-item>
+
+<ion-item>
+  <ion-button color="success" class="button-1"  (click)="airportsss()">
+Get Details
+  </ion-button>
+</ion-item>
+
+
+<ion-card class="card-2" *ngFor="let airport of airport1" >
+  <ion-label class="label-1">Name:{{airport.name}}</ion-label>
+  <ion-label class="label-1">City:{{airport.city}}</ion-label>
+  <ion-label class="label-1">Code:{{airport.code}}</ion-label> 
+
+</ion-card>
+
+</ion-card>
+</ion-content>

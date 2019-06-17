@@ -1,0 +1,177 @@
+<!-- <ion-content class="task-feature">
+  <ion-item class="I">
+    <h1>
+      Create Task
+    </h1>
+    <ion-button class="but" slot="end" color="white"> X</ion-button>
+  </ion-item>
+  <ion-item class="I1">
+    <p>Welcome to my workspace</p>
+  </ion-item>
+
+
+<ion-card>
+ <ion-item class="I2">
+  <p>Title</p></ion-item>
+
+  <ion-card class="C">
+  
+
+  <ion-item class="item-2">
+     <ion-input   class="D ion-no-padding" placeholder="Task-Name" color="black"></ion-input>
+      <ion-button (click)="presentPopover()" class="button" color="white" class="B">
+    <ion-icon  class="ion-text-end ion-no-padding icn" name="star-outline"></ion-icon>
+   </ion-button>
+ 
+  </ion-item>
+  <ion-item class="I3">
+    <ion-input class="inp" placeholder ="Description"></ion-input>
+  </ion-item>
+</ion-card>
+
+<ion-item>
+<ion-label class="Sh">Day</ion-label>
+</ion-item>
+
+
+
+ 
+ <ion-item class="Date">
+    <ion-label ></ion-label>
+    <ion-icon  slot="end" name="calendar"> </ion-icon>
+    <ion-datetime slot="start" displayFormat="MMMM YY" min="1989-06-04" max="2004-08-23" value="1994-12-15T13:47:20.789"></ion-datetime>
+ </ion-item>
+ 
+
+  <ion-item class="tt">
+    
+     <ion-label class="h" >Hour</ion-label>
+     <ion-label class="m">Minute</ion-label>
+    <ion-label class="du">Duration(Optional)</ion-label>
+  </ion-item>
+  <ion-item class="T1">
+       <ion-input class="B1">1</ion-input>
+       <ion-input class="B2">10</ion-input>  
+       <ion-select class="B3" placeholder="5 Days">
+         <ion-select-option value="4 Days">4 Days</ion-select-option>
+         <ion-select-option value="3 Days">3 Days</ion-select-option>
+         <ion-select-option value="2 Days">2 Days</ion-select-option>
+         <ion-select-option value="7 Days">7 Days</ion-select-option>
+         <ion-select-option value="6 Days">6 Days</ion-select-option>
+       </ion-select>
+  </ion-item>
+
+
+  <ion-item>
+      <ion-icon  slot="end" name="arrow-round-forward"></ion-icon>
+  </ion-item>
+
+  <ion-item></ion-item>
+
+</ion-card>
+</ion-content> -->
+
+
+<ion-content class="task-feature">
+    <ion-item class="I">
+      <h1>
+        Create Task
+      </h1>
+      <ion-button class="but" slot="end" color="white"> X</ion-button>
+    </ion-item>
+    <ion-item class="I1">
+      <p>Welcome to my workspace</p>
+    </ion-item>
+  
+  
+  <ion-card class="card2">
+   <ion-item class="I2">
+    <p>Title</p></ion-item>
+  
+    <ion-card class="Card">
+    
+  
+    <ion-item class="item-2">
+       <ion-input   class="D ion-no-padding" placeholder="Task-Name" color="black"></ion-input>
+        <ion-button (click)="presentPopover()" class="button" color="white" class="B">
+      <ion-icon  class="ion-text-end ion-no-padding icn" name="star-outline"></ion-icon>
+     </ion-button>
+   
+    </ion-item>
+    <ion-item class="I3">
+      <ion-input class="inp" placeholder ="Description"></ion-input>
+    </ion-item>
+  </ion-card>
+
+  <ion-item>
+      <ion-label class="Sh1">Start Time</ion-label>
+      </ion-item>
+
+
+      <ion-item class="item-2">
+          <ion-input   class="D ion-no-padding" placeholder="DD/MM/YYYY" color="black">
+     <ion-icon  class="cal" name="calendar"> </ion-icon>
+      <ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]="myDate"></ion-datetime>
+   
+      <ion-datetime displayFormat="HH:mm"></ion-datetime> </ion-input> 
+      <ion-icon  class="clc"  name="alarm"></ion-icon> 
+  </ion-item>  
+
+  <ion-item>
+    <ion-label class="Sh1">End Time</ion-label>
+    </ion-item>
+
+
+    <ion-item class="item-2">
+      <ion-input   class="D ion-no-padding" placeholder="DD/MM/YYYY" color="black">
+ <ion-icon  class="cal" name="calendar"> </ion-icon>
+  <ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]="myDate"></ion-datetime>
+
+  <ion-datetime displayFormat="HH:mm"></ion-datetime> </ion-input> 
+  <ion-icon  class="clc"  name="alarm"></ion-icon> 
+</ion-item> 
+<ion-item>
+  <ion-label class="label-a">Add@team/members</ion-label>
+</ion-item>
+<ion-item>
+ <ion-note *ngFor="let item of members">
+   <ion-img class="image" [src]="item.avatar"></ion-img>
+ </ion-note>
+ <ion-button slot="end"color="white" class="button-11">View All</ion-button>
+</ion-item>
+
+<ion-item>
+  <ion-label class="label-a">Add Attachments</ion-label>
+</ion-item>
+<ion-item>
+ <ion-note *ngFor="let item of teamImages">
+   <ion-img class="image" [src]="item"></ion-img>
+ </ion-note>
+ <ion-button slot="end" color="white" class="button-11">View All</ion-button>
+</ion-item>
+
+<ion-item  class="item-33">
+  <ion-label class="label-a">Add guests(Youcan add multiple guests separated by comma ",")</ion-label>
+</ion-item>
+<ion-item class="item-s">
+<ion-input class="input-1 ion-no-padding"  color="black" placeholder="Enter guest email"> </ion-input>
+<ion-button class="button-d ion-no-padding ion-no-margin" fill="clear" color="light" slot="end">Add</ion-button>
+</ion-item>
+
+
+<ion-item>
+  <ion-label class="label-6">Set Remainder</ion-label>
+</ion-item>
+<ion-item class="item-3 ion-no-padding">
+    <ion-datetime slot="start" displayFormat="MMMM YY" min="1989-06-04" max="2004-08-23" value="1994-12-15T13:47:20.789"></ion-datetime>
+    
+    <ion-icon  name="time" slot="end"></ion-icon>
+     <ion-datetime displayFormat="HH:mm" ></ion-datetime>  
+</ion-item>
+<ion-item>
+  <ion-button color="success" class="button-cn"> Create Task</ion-button>
+</ion-item>
+
+  </ion-card>
+
+

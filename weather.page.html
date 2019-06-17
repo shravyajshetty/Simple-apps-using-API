@@ -1,0 +1,45 @@
+<ion-content>
+    <ion-item class="item-1">
+      <ion-label class="label-1">
+      Weather Forecast
+    </ion-label>
+    
+    </ion-item>
+<ion-row>
+  <ion-col>
+    <ion-input [(ngModel)]="location" placeholder="Enter Input"></ion-input>
+    <ion-button (click)="getWeather()">Get Weather</ion-button>
+  </ion-col>
+</ion-row>
+    <ion-card class="card-1" *ngFor="let weather of weather1.items">
+      <ion-item >
+      <ion-label class="label-2" >
+        Date_for:{{weather.fajr}}</ion-label>
+      <ion-label class="label-3">
+        Fajr:{{weather.date_for}}
+      </ion-label>
+    </ion-item>
+        <!-- <ion-label class="label-3"> 
+          Weather:{{weather.}}
+        </ion-label>
+    
+        <ion-label class="label-3">
+          Wind:{{weathr.wind}}
+        </ion-label>
+      
+    
+          <ion-label class="label-3">
+           Rain:{{weathr.weather}}
+          </ion-label>
+      
+            <ion-label class="label-3">
+              Clouds:{{weathr.clouds}}
+            </ion-label>
+          -->
+  
+    </ion-card>
+  
+  
+  </ion-content>
+  
+  
